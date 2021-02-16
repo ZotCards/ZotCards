@@ -63,7 +63,7 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
 * Login Screen
    * Home screen
 * Create Deck Screen
-   * Home Screen (after the user creates the deck)
+   * View Deck Screen (after the user creates the deck)
 * Home Screen
    * Learn Screen
 
