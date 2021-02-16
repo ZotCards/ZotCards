@@ -14,7 +14,7 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
 ## Product Spec
 
 ### 1. User Stories (Required and Optional) 
-## Required Must-have Stories
+**Required Must-have Stories**
  * [ ] User can create a new account
  * [ ] User can login
  * [ ] User can create their own deck
@@ -30,7 +30,7 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
  * [ ] User can interact with "study" mode by swiping left if they don't know OR swipe right (if they got it right)
  * [ ] Spanish to English for a sample layout (deck 1)
 
-## Optional Nice-to-have Stories
+**Optional Nice-to-have Stories**
 * [ ] User can arrange the card based on difficulty level
 * [ ] Speech to text utility
 * [ ] User can create multiple different decks
