@@ -75,7 +75,8 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
 * [ ] Design the deck based on preferences (personalization stuff)
     * [ ] Background Layout
     * [ ] Dark Mode color themes
-    
 
+### Wireframes from 2/16/2021
+<img src="https://github.com/ZotCards/ZotCards/blob/main/zot-cards-wire-frame-draft.PNG" width=800><br>
 
 
