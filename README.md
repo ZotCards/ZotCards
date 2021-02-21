@@ -39,6 +39,7 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
       * [ ] Public or Private
     * [ ] User can "bookmark" a card 
     * [ ] French to English (deck 2)
+* [ ] User will have a 'statistic page' after a study session
 
 ### 2. Screen Archetypes
 * Registration Screen
