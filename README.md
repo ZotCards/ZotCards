@@ -79,6 +79,8 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
 
 ### Wireframes from 2/16/2021
 <img src="https://github.com/ZotCards/ZotCards/blob/main/zot-cards-wire-frame-draft.PNG" width=800><br>
-<img src="https://github.com/ZotCards/ZotCards/blob/main/zot-cards-wire-frame-draft.PNG" width=800><br>
+
+### Wireframes from 2/22/2021
+<img src="https://github.com/ZotCards/ZotCards/blob/main/ZotCards.PNG" width=800><br>
 
 
