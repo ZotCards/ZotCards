@@ -84,6 +84,22 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
 [This section will be completed in Unit 9]
 ### Models
 User
+|Property |Type| Description|
+|-----|--------|------------|
+|userid| Int | unique id for the user (default field)|
+|userEmail | String | user's email |
+|userPassword| String | password | 
+
+Create Deck
+|Property |Type| Description|
+|-----|--------|------------|
+|deckId| Int | unique id for the deck (default field)| 
+|deckName |String| deck name|
+|deckCount | Integer | number of cards in the deck|
+|author| String | author name |
+|cardCollection| List<Cards> | Text |
+|createdAt| DateTime| date when post is created (default field)|
+|updatedAt | DateTime| date when post is last updated (default field)|
 
 Create Card
 [Add table of models]
@@ -95,9 +111,11 @@ Create Card
 |answer | String | Text |
 | createdAt| DateTime| date when post is created (default field)|
 | updatedAt | DateTime| date when post is last updated (default field)|
+
+
 ### Networking
 - [Add list of network requests by screen ]
-- Home Screen
+- Login Screen
 ```
  mAuth.createUserWithEmailAndPassword(email, password)
         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
