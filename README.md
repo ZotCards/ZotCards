@@ -80,4 +80,24 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
 ### Wireframes from 2/22/2021
 <img src="https://github.com/ZotCards/ZotCards/blob/main/ZotCards.PNG" width=800><br>
 
+## Schema 
+[This section will be completed in Unit 9]
+### Models
+User
+
+Create Card
+[Add table of models]
+|Property |Type| Description|
+|-----|--------|------------|
+|objectid |String| unique id for the user post (default field)|
+|Author | String | author name|
+|question| String | Text |
+|answer | String | Text |
+| createdAt| DateTime| date when post is created (default field)|
+| updatedAt | DateTime| date when post is last updated (default field)|
+### Networking
+- [Add list of network requests by screen ]
+- [Create basic snippets for each Parse network request]
+- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
 
