@@ -36,4 +36,9 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:22.2.0'
+    implementation 'com.android.support:design:22.2.0'
+    implementation 'com.jakewharton:butterknife:6.1.0'
 }
