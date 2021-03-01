@@ -85,7 +85,6 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
 
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 User
 |Property |Type| Description|
@@ -118,7 +117,7 @@ Create Card
 
 
 ### Networking
-## List of network requests by screen
+#### List of network requests by screen
 
 - Signup Request
  ```
