@@ -115,29 +115,118 @@ Create Card
 
 ### Networking
 - [Add list of network requests by screen ]
-- Login Screen
-```
- mAuth.createUserWithEmailAndPassword(email, password)
-        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "createUserWithEmail:success");
-                    FirebaseUser user = mAuth.getCurrentUser();
-                    updateUI(user);
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                    Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
-                            Toast.LENGTH_SHORT).show();
-                    updateUI(null);
-                }
 
-                // ...
+- Signup Request
+ ```
+ private void SignUpUser(String username, String password) {
+        ParseUser user = new ParseUser();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.signUpInBackground(new SignUpCallback() {
+            public void done(ParseException e) {
+                if (e != null) {
+                    Log.e(TAG,"Issue with sign up",e);
+                    return;
+                }
+                goMainActivity();
             }
         });
-   ```
+    }
+ ```
+- Login Request
+```
+private void loginUser(String username, String password){
+    
+    ParseUser.logInInBackground(username, password, new LogInCallback() {
+            @Override
+            public void done(ParseUser user, ParseException e) {
+                if (e !=null){
+                    Log.e(TAG,"Issue with login",e);
+                    Toast.makeText(LoginActivity.this,"Issue with login!",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                //TODO: navigate to the main activity if the user has signed in properly
+                goMainActivity();
+                Toast.makeText(LoginActivity.this,"Logged in ",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+```
+- GetDeck Request
+```
+Class Deck
+{
+	List<Cards> cardCollection;
+	String deckName;
+	String deckUID;
+	Int numCards;
+	ParseUser author;
+
+	// Grab the deck from the DB
+	private void setDeck(String deckUID);
+	// Returns the deck
+	Public List<Cards> getDeck();
+	Public void fetchDeck(String UID);
+	Public void deleteDeck();
+	Public void deleteCard(int index);
+
+	// Set the Deck Name
+	Private void setDeckName(String deckName);
+	// Get the Deck Name
+	Public String getDeckName();
+
+	// Set the Deck ID
+	Private void setDeckUID(String UID);
+	// Get the Deck ID
+    Public String getDeckUID();
+
+	// Return the deckSize
+    Public int getDeckSize();
+
+    // Set the Author of Parseuser type
+	Private void setAuthor(ParseUser author);
+    // Get the Author of Parseuser type
+	Public ParseUser getAuthor();	
+
+    public ArrayList<Deck> getDecks(int courseID){
+
+       ArrayList<Deck> deckList = new ArrayList<Deck>();
+
+       String selectQuery = "SELECT * FROM " + TABLE_DECK_DETAIL + " WHERE " + COURSE_ID + "=" + courseID;
+
+       SQLiteDatabase db = this.getReadableDatabase();
+
+       Cursor cursor = db.rawQuery(selectQuery, null);
+
+       cursor.moveToFirst();
+
+       System.out.println("DBHandler courseID in getDecks: " + courseID);
+
+       //loop through all rows to return
+
+       while(!cursor.isAfterLast()){
+
+           Deck deck = new Deck(Integer.parseInt(cursor.getString(0)), courseID,
+
+                   cursor.getString(2), Integer.parseInt(cursor.getString(3)));
+
+           deck.set_deckId(courseID);
+           deckList.add(deck);
+
+           //Log.i(TAG, "HERE WE ARE CourseID: " + courseID);
+
+           cursor.moveToNext();
+       }
+       Log.i(TAG, "Return All Deck Names");
+       db.close();
+       return deckList;
+
+   }
+ }
+
+````
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
