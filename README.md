@@ -114,7 +114,7 @@ Create Card
 
 
 ### Networking
-- [Add list of network requests by screen ]
+## List of network requests by screen
 
 - Signup Request
  ```
@@ -227,6 +227,14 @@ Class Deck
  }
 
 ````
+
+* Deck Screen
+	* (Create/POST) Create a new deck object
+	* (Delete) Delete existing deck
+* Create Card Screen
+	* (Create/ POST) Add cards to the deck
+	* (Delete) Delete existing cards
+
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
