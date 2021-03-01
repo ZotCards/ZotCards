@@ -105,7 +105,6 @@ Create Deck
 |updatedAt | DateTime| date when post is last updated (default field)|
 
 Create Card
-[Add table of models]
 |Property |Type| Description|
 |-----|--------|------------|
 |objectid |String| unique id for the user post (default field)|
