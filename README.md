@@ -180,50 +180,50 @@ Class Deck
 	// Set the Deck ID
 	Private void setDeckUID(String UID);
 	// Get the Deck ID
-    Public String getDeckUID();
+    	Public String getDeckUID();
 
 	// Return the deckSize
-    Public int getDeckSize();
+    	Public int getDeckSize();
 
-    // Set the Author of Parseuser type
+    	// Set the Author of Parseuser type
 	Private void setAuthor(ParseUser author);
-    // Get the Author of Parseuser type
+    	// Get the Author of Parseuser type
 	Public ParseUser getAuthor();	
 
-    public ArrayList<Deck> getDecks(int courseID){
+    	public ArrayList<Deck> getDecks(int courseID){
 
-       ArrayList<Deck> deckList = new ArrayList<Deck>();
+	       ArrayList<Deck> deckList = new ArrayList<Deck>();
 
-       String selectQuery = "SELECT * FROM " + TABLE_DECK_DETAIL + " WHERE " + COURSE_ID + "=" + courseID;
+	       String selectQuery = "SELECT * FROM " + TABLE_DECK_DETAIL + " WHERE " + COURSE_ID + "=" + courseID;
 
-       SQLiteDatabase db = this.getReadableDatabase();
+	       SQLiteDatabase db = this.getReadableDatabase();
 
-       Cursor cursor = db.rawQuery(selectQuery, null);
+	       Cursor cursor = db.rawQuery(selectQuery, null);
 
-       cursor.moveToFirst();
+	       cursor.moveToFirst();
 
-       System.out.println("DBHandler courseID in getDecks: " + courseID);
+	       System.out.println("DBHandler courseID in getDecks: " + courseID);
 
-       //loop through all rows to return
+	       //loop through all rows to return
 
-       while(!cursor.isAfterLast()){
+	       while(!cursor.isAfterLast()){
 
-           Deck deck = new Deck(Integer.parseInt(cursor.getString(0)), courseID,
+		   Deck deck = new Deck(Integer.parseInt(cursor.getString(0)), courseID,
 
-                   cursor.getString(2), Integer.parseInt(cursor.getString(3)));
+			   cursor.getString(2), Integer.parseInt(cursor.getString(3)));
 
-           deck.set_deckId(courseID);
-           deckList.add(deck);
+		   deck.set_deckId(courseID);
+		   deckList.add(deck);
 
-           //Log.i(TAG, "HERE WE ARE CourseID: " + courseID);
+		   //Log.i(TAG, "HERE WE ARE CourseID: " + courseID);
 
-           cursor.moveToNext();
-       }
-       Log.i(TAG, "Return All Deck Names");
-       db.close();
-       return deckList;
+		   cursor.moveToNext();
+	       }
+	       Log.i(TAG, "Return All Deck Names");
+	       db.close();
+	       return deckList;
 
-   }
+   	}
  }
 
 ````
