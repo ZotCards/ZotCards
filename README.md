@@ -231,7 +231,7 @@ Class Deck
 * Deck Screen
 	* (Create/POST) Create a new deck object
 	* (Delete) Delete existing deck
-* Create Card Screen
+* Card Screen
 	* (Create/ POST) Add cards to the deck
 	* (Delete) Delete existing cards
 
