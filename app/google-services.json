@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "228238534128",
+    "project_id": "zotcard",
+    "storage_bucket": "zotcard.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228238534128:android:e3831c5dff7a858a356935",
+        "android_client_info": {
+          "package_name": "com.example.zotcard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228238534128-3sqj71iov4o28broch56nr01rb7ljhl8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBth94GZNdMm78X51hmPl0hyPkMNTLlYHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228238534128-3sqj71iov4o28broch56nr01rb7ljhl8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
