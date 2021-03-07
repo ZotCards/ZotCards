@@ -55,8 +55,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void loginUser(String username, String password){
-        finish();
-
+        Intent i = new Intent(this,MainActivity.class);
+        startActivity(i);
     }
 
 }
