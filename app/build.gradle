@@ -41,4 +41,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:22.2.0'
     implementation 'com.android.support:design:22.2.0'
     implementation 'com.jakewharton:butterknife:6.1.0'
+
+    implementation "androidx.appcompat:appcompat:${appCompatVersion}"
+    implementation "com.google.android.material:material:${designSupportVersion}"
 }
