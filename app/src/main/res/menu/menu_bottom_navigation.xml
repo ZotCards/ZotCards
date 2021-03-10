@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_create"
-        android:title="Create"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/action_decks"
         android:title="Decks"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_create"
+        android:title="Create"
         app:showAsAction="always" />
 </menu>
