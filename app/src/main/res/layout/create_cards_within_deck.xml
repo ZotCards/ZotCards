@@ -6,8 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    tools:context=".CreateDeckActivity">
-
+    tools:context=".CreateCardActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -18,6 +17,7 @@
 
         android:background="#CBC5C5"
         app:menu="@menu/menu_bottom_navigation" />
+
 
 
 </LinearLayout>

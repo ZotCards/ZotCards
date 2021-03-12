@@ -6,23 +6,20 @@
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    tools:context=".SignUpActivity">
+    tools:context=".fragments.CreateCardFragment">
 
-
-
-    <!-- Email Label -->a
     <TextView
         android:id="@+id/Logo"
         android:layout_width="wrap_content"
-        android:layout_height="72dp"
+        android:layout_height="93dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="24dp"
         android:fontFamily="sans-serif-medium"
-        android:text="ZotCards"
+        android:text="Add Cards to Your Deck"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="#2196F3"
-        android:textSize="65sp"
+        android:textColor="#485660"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="normal" />
 
@@ -32,10 +29,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp">
-        <EditText android:id="@+id/input_user"
+        <EditText android:id="@+id/input_question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username" />
+            android:hint="Enter Question" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -43,15 +40,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp">
-        <EditText android:id="@+id/input_password"
+        <EditText android:id="@+id/input_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Password"/>
+            android:hint="Enter Answer"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btn_signup"
+        android:id="@+id/btn_addCard"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -59,16 +55,7 @@
         android:padding="12dp"
         android:background="#2196F3"
         android:textColor="#F9F7F7"
-        android:text="Sign Up"/>
-
-
-    <TextView android:id="@+id/link_login"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="Already a member? Login"
-        android:gravity="center"
-        android:textSize="16dip"/>
+        android:text="Add Card"/>
 
 
 

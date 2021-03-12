@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="3"
+    android:useDefaultMargins="true"
+    tools:context=".fragments.DecksFragment">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/Deck1"
+            android:layout_width="199dp"
+            android:layout_height="171dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:background="@drawable/mybutton"
+            android:text="Spanish Vocab"
+            android:textColor="#F9F7F7" />
+
+        <Button
+            android:id="@+id/Deck2"
+            android:layout_width="199dp"
+            android:layout_height="171dp"
+            android:layout_row="0"
+            android:layout_column="1"
+
+            android:layout_gravity="left|top"
+            android:background="@drawable/mybutton"
+            android:text="Algebra 2"
+            android:textColor="#F9F7F7" />
+
+        <Button
+            android:id="@+id/Deck4"
+            android:layout_width="199dp"
+            android:layout_height="171dp"
+            android:layout_row="1"
+            android:layout_rowSpan="2"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:background="@drawable/mybutton"
+            android:text="Computer Science"
+            android:textColor="#F9F7F7" />
+
+        <Button
+            android:id="@+id/Deck3"
+            android:layout_width="199dp"
+            android:layout_height="171dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="left|top"
+            android:background="@drawable/mybutton"
+            android:text="French Vocab"
+            android:textColor="#F9F7F7" />
+
+    </GridLayout>
+
+
+
+</LinearLayout>
