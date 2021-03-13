@@ -9,15 +9,38 @@
     tools:context=".CreateDeckActivity">
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btn_createDeck"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:background="@drawable/mybutton"
+        android:textColor="#F9F7F7"
+        android:text="Create Your Own Deck"/>
 
-        android:background="#CBC5C5"
-        app:menu="@menu/menu_bottom_navigation" />
+    <Button
+        android:id="@+id/btn_editDeck"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:background="@drawable/mybutton"
+        android:textColor="#F9F7F7"
+        android:text="Edit Pre-existing Deck"/>
+
+    <Button
+        android:id="@+id/btn_addCard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:background="@drawable/mybutton"
+        android:textColor="#F9F7F7"
+        android:text="Add Card"/>
 
 
 </LinearLayout>

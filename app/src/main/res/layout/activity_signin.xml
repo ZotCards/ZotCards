@@ -10,7 +10,7 @@
 
 
 
-    <!-- Email Label -->a
+    <!-- Email Label -->
     <TextView
         android:id="@+id/Logo"
         android:layout_width="wrap_content"
@@ -69,7 +69,4 @@
         android:text="Already a member? Login"
         android:gravity="center"
         android:textSize="16dip"/>
-
-
-
 </LinearLayout>
