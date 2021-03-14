@@ -2,12 +2,20 @@ package com.example.zotcard;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpActivity extends AppCompatActivity {
     public static final String TAG = "LoginActivity";
@@ -29,7 +37,7 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = input_user.getText().toString();
                 String password = input_password.getText().toString();
-                signupUser(username,password);
+                createAccount(username,password);
             }
         });
 
@@ -49,9 +57,35 @@ public class SignUpActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    // Bundle this user alongside the activity?
+    private void gotoLoginActivity(FirebaseUser user)
+    {
+        Intent i = new Intent(this, LoginActivity.class);
+        startActivity(i);
+    }
 
-    private void signupUser(String username, String password){
 
+    private void createAccount(String email, String password){
+        LoginActivity.mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "createUserWithEmail:success");
+                            FirebaseUser user = LoginActivity.mAuth.getCurrentUser();
+                            gotoLoginActivity(user);
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                            Toast.makeText(SignUpActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            // updateUI(null);
+                        }
+
+                        // ...
+                    }
+                });
     }
 
 
