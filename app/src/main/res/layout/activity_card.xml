@@ -5,10 +5,9 @@
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/gradient_backgroud"
     android:fitsSystemWindows="true"
     tools:context="com.example.zotcard.Activities.CardActivity">
-
 
     <com.example.zotcard.CustomViews.MultiViewPager
         android:id="@+id/pager"
