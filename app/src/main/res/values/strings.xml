@@ -11,4 +11,7 @@
     <string name="appbar_demo">%1$s - %2$s</string>
     <string name="cards_count_format"> %1$d Cards</string>
     <string name="_0_cards">0 cards</string>
+    <string name="pronunciation">Pronunciation</string>
+    <string name="english">English</string>
+    <string name="greek">Greek</string>
 </resources>

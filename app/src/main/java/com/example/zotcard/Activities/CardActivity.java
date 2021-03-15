@@ -67,7 +67,7 @@ import java.util.ArrayList;
  * <p>
  * Created by Ritesh Shakya on 8/22/2016.
  */
-public class CardActivity extends AppCompatActivity implements FragmentStatePager.EmptyInterface, SpinnerInteractionListener.SpinnerListener {
+public class CardActivity extends AppCompatActivity implements FragmentStatePager.EmptyInterface, View.OnClickListener, SpinnerInteractionListener.SpinnerListener {
     /**
      * Default set of cards to load on first run.
      */
@@ -95,7 +95,7 @@ public class CardActivity extends AppCompatActivity implements FragmentStatePage
     /**
      * TAG for {@link CardActivity} class used in {@link android.util.Log}
      */
-    private final String TAG = "MainActivity";
+    private final String TAG = "CardActivity";
     /**
      * Dataset for List of sets added dynamically.
      */
@@ -163,7 +163,7 @@ public class CardActivity extends AppCompatActivity implements FragmentStatePage
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_card);
 
         // Instantiate necessary Views.
 //        actionBarModeDisplay = (TextView) findViewById(R.id.action_bar_mode);
@@ -171,7 +171,7 @@ public class CardActivity extends AppCompatActivity implements FragmentStatePage
 //        switchMode = (ImageButton) findViewById(R.id.changeMode);
 //        switchMode.setOnClickListener(this);
         countDisplay = findViewById(R.id.countDisplay);
-//        countDisplay.setOnClickListener(this);
+        countDisplay.setOnClickListener(this);
         mViewPager = findViewById(R.id.pager);
         // Instantiate SharedPreference to get stored state.
 //        mPrefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
@@ -283,9 +283,9 @@ public class CardActivity extends AppCompatActivity implements FragmentStatePage
                 // Get the card from the snapshot and remove it to the UI
                 CardModel card = dataSnapshot.getValue(CardModel.class);
                 cardAdapter.removeCard(card);
-                if (dbHelper.checkExist(card.voiceMale)) {
-                    dbHelper.onDelete(card.voiceMale);
-                }
+//                if (dbHelper.checkExist(card.voiceMale)) {
+//                    dbHelper.onDelete(card.voiceMale);
+//                }
             }
 
             public void onChildMoved(DataSnapshot dataSnapshot, String s) {
@@ -358,6 +358,12 @@ public class CardActivity extends AppCompatActivity implements FragmentStatePage
 //            mViewPager.setCurrentItem(0, true);
 //        }
 //    }
+    public void onClick(View view) {
+        if (view.getId() == R.id.countDisplay) { // Randomizes the card list to display.
+            cardAdapter.randomize();
+            mViewPager.setCurrentItem(0, true);
+        }
+    }
 
     /**
      * Default callback method for {@link android.widget.AdapterView.OnItemSelectedListener} .     *

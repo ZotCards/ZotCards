@@ -38,11 +38,11 @@ public class CardModel implements Parcelable {
     /**
      * Greek Pronunciation for individual card (Text).
      */
-    public String pronunciationGreek;
+//    public String pronunciationGreek;
     /**
      * Greek Pronunciation for individual card (Voice File).
      */
-    public String voiceMale;
+//    public String voiceMale;
 
     /**
      * Default Constructor.
@@ -54,17 +54,17 @@ public class CardModel implements Parcelable {
     /**
      * Firebase uses this constructor for initializing class.
      *
-     * @param englishWord        English word for individual card.
-     * @param greekWord          Greek word for individual card.
-     * @param pronunciationGreek Greek Pronunciation for individual card (Text).
-     * @param voiceMale          Pronunciation for individual card (Voice File).
+     * @param englishWord English word for individual card.
+     * @param greekWord   Greek word for individual card.
+     *                    //     * @param pronunciationGreek Greek Pronunciation for individual card (Text).
+     *                    //     * @param voiceMale          Pronunciation for individual card (Voice File).
      */
     @SuppressWarnings("unused")
-    public CardModel(String englishWord, String greekWord, String pronunciationGreek, String voiceMale) {
+    public CardModel(String englishWord, String greekWord) {
         this.englishWord = englishWord;
         this.greekWord = greekWord;
-        this.pronunciationGreek = pronunciationGreek;
-        this.voiceMale = voiceMale;
+//        this.pronunciationGreek = pronunciationGreek;
+//        this.voiceMale = voiceMale;
     }
 
     /**
@@ -73,8 +73,8 @@ public class CardModel implements Parcelable {
     private CardModel(Parcel in) {
         englishWord = in.readString();
         greekWord = in.readString();
-        pronunciationGreek = in.readString();
-        voiceMale = in.readString();
+//        pronunciationGreek = in.readString();
+//        voiceMale = in.readString();
     }
 
     @Override
@@ -92,8 +92,8 @@ public class CardModel implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(englishWord);
         parcel.writeString(greekWord);
-        parcel.writeString(pronunciationGreek);
-        parcel.writeString(voiceMale);
+//        parcel.writeString(pronunciationGreek);
+//        parcel.writeString(voiceMale);
     }
 
 }

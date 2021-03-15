@@ -34,7 +34,50 @@
             android:textAlignment="center"
             android:text="back"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-    </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/pronunciationBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="8dp"
+            app:mrl_rippleAlpha=".8"
+            app:mrl_rippleColor="@color/colorAccent"
+            app:mrl_rippleDuration="350"
+            app:mrl_rippleFadeDuration="75"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="false"
+            app:mrl_ripplePersistent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/play_button"
+                    android:src="@drawable/ic_play_circle_filled_black_24px"
+                    app:tint="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/pronunciation"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

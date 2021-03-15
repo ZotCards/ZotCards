@@ -1,25 +1,19 @@
 package com.example.zotcard.Activities;
 
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.balysv.materialripple.MaterialRippleLayout;
+
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.PagerAdapter;
+
 import com.example.zotcard.CustomViews.FlipAnimation;
 import com.example.zotcard.Helper.Utils;
 import com.example.zotcard.Model.CardModel;
 import com.example.zotcard.R;
-
-import java.io.File;
-import java.io.IOException;
 
 // TODO:
 //import static com.sorcery.flashcards.Activities.MainActivity.current_mode;
