@@ -63,7 +63,7 @@ public class ScreenSlidePageFragment extends Fragment implements View.OnClickLis
     public static com.example.zotcard.Activities.ScreenSlidePageFragment newInstance(CardModel cardModel) {
         com.example.zotcard.Activities.ScreenSlidePageFragment fragment = new com.example.zotcard.Activities.ScreenSlidePageFragment();
         Bundle args = new Bundle();
-//        args.putParcelable(ARG_CARD, cardModel);
+        args.putParcelable(ARG_CARD, cardModel);
         fragment.setArguments(args);
         return fragment;
     }
@@ -143,6 +143,8 @@ public class ScreenSlidePageFragment extends Fragment implements View.OnClickLis
      */
     public void updateCheckedStatus(CardModel cardModel) {
         this.cardModel = cardModel;
+        frontText.setText(cardModel.englishWord);
+        backText.setText(cardModel.greekWord);
 //        frontText.setText(current_mode == CurrentMode.GREEK ? cardModel.greekWord : cardModel.englishWord);
 //        backText.setText(current_mode == CurrentMode.GREEK ? cardModel.englishWord : cardModel.greekWord);
 
