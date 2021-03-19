@@ -20,14 +20,9 @@
         <activity
             android:name=".SignUpActivity"
             android:label="@string/app_name" />
-
-<<<<<<< HEAD
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" />
-
-=======
->>>>>>> jees-branch
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
