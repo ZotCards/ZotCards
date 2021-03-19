@@ -143,8 +143,8 @@ public class ScreenSlidePageFragment extends Fragment implements View.OnClickLis
      */
     public void updateCheckedStatus(CardModel cardModel) {
         this.cardModel = cardModel;
-        frontText.setText(cardModel.englishWord);
-        backText.setText(cardModel.greekWord);
+        frontText.setText(cardModel.frontSide);
+        backText.setText(cardModel.backSide);
 //        frontText.setText(current_mode == CurrentMode.GREEK ? cardModel.greekWord : cardModel.englishWord);
 //        backText.setText(current_mode == CurrentMode.GREEK ? cardModel.englishWord : cardModel.greekWord);
 

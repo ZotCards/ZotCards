@@ -3,23 +3,44 @@ package com.example.zotcard.Model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+
+        import android.os.Parcel;
+        import android.os.Parcelable;
+
 /**
- * Created by Ritesh Shakya on 8/21/2016.
+ * Created by Jee Kim on 3/13/2021.
  */
 
-public class CardModel implements Parcelable {
+public class UserModel implements Parcelable {
 
     public String frontSide;
     public String backSide;
+    public String userName;
+    public String objectID;
 
-    /*
-     * @param frontSide        Front side of the card
-     * @param backSide         Backside of card
+
+    /**
+     * Default Constructor.
      */
     @SuppressWarnings("unused")
-    public CardModel(String frontSide, String backSide) {
+    public UserModel() {
+
+    }
+
+    /**
+     * Firebase uses this constructor for initializing class.
+     *
+     * @param frontSide        Front side of the card
+     * @param backSide         Backside of card
+     * @param userName         Username of card owner
+     * @param objectid         ID of the card
+     */
+    @SuppressWarnings("unused")
+    public UserModel(String frontSide, String backSide, String userName, String objectid) {
         this.frontSide = frontSide;
         this.backSide = backSide;
+        this.userName = userName;
+        this.objectID = objectid;
     }
 
     public String getFrontSide() {
@@ -30,27 +51,36 @@ public class CardModel implements Parcelable {
         return backSide;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getObjectID() {
+        return objectID;
+    }
 
     /**
      * @param in Parcelable object returned on state changes.
      */
-    private CardModel(Parcel in) {
+    private UserModel(Parcel in) {
         frontSide = in.readString();
         backSide = in.readString();
+        userName = in.readString();
+        objectID = in.readString();
     }
 
     /**
      * Create new object of state changes.
      */
-    public static final Creator<CardModel> CREATOR = new Creator<CardModel>() {
+    public static final Creator<UserModel> CREATOR = new Creator<UserModel>() {
         @Override
-        public CardModel createFromParcel(Parcel in) {
-            return new CardModel(in);
+        public UserModel createFromParcel(Parcel in) {
+            return new UserModel(in);
         }
 
         @Override
-        public CardModel[] newArray(int size) {
-            return new CardModel[size];
+        public UserModel[] newArray(int size) {
+            return new UserModel[size];
         }
     };
 
@@ -69,6 +99,8 @@ public class CardModel implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(frontSide);
         parcel.writeString(backSide);
+        parcel.writeString(userName);
+        parcel.writeString(objectID);
     }
 
 }

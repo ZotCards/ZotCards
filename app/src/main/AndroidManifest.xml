@@ -10,13 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
+        <activity android:name=".FirebaseUIActivity"></activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".SignUpActivity"
@@ -27,7 +27,6 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" />
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts"
