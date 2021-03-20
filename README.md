@@ -17,18 +17,18 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
 **Required Must-have Stories**
  * [x] User can create a new account
  * [x] User can login
- * [ ] User can create their own deck
+ * [] User can create their own deck
      * A filled with "cards"
      * A deck should have "names" 
  * [ ] User can edit their deck
      * Remove specific cards
      * Alter front and back side
      * Add cards to deck 
- * [ ] User should be able save the card (via the cloud)
+ * [x] User should be able save the card (via the cloud)
      * Firebase
      * Local persistent storage (MVP)
- * [ ] User can interact with "study" mode by swiping left if they don't know OR swipe right (if they got it right)
- * [ ] Spanish to English for a sample layout (deck 1)
+ * [x] User can interact with "study" mode by swiping left if they don't know OR swipe right (if they got it right)
+ * [x] Spanish to English for a sample layout (deck 1)
 
 **Optional Nice-to-have Stories**
 * [ ] User can arrange the card based on difficulty level
