@@ -24,6 +24,15 @@
             android:name=".Activities.CardActivity"
             android:label="ZotCard" />
         <activity
+            android:name=".Activities.FrenchCardActivity"
+            android:label="ZotCard" />
+        <activity
+            android:name=".Activities.SpanishCardActivity"
+            android:label="ZotCard" />
+        <activity
+            android:name=".Activities.Algebra2CardActivity"
+            android:label="ZotCard" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name" />
         <meta-data

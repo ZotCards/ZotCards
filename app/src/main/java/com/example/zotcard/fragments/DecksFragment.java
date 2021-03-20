@@ -12,7 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.zotcard.Activities.Algebra2CardActivity;
 import com.example.zotcard.Activities.CardActivity;
+import com.example.zotcard.Activities.FrenchCardActivity;
+import com.example.zotcard.Activities.SpanishCardActivity;
 import com.example.zotcard.R;
 
 public class DecksFragment extends Fragment {
@@ -47,7 +50,7 @@ public class DecksFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "Button1!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getContext(), CardActivity.class);
+                Intent intent = new Intent(getContext(), SpanishCardActivity.class);
                 startActivity(intent);
 
             }
@@ -57,6 +60,8 @@ public class DecksFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "Button2!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(), Algebra2CardActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -65,6 +70,8 @@ public class DecksFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "Button3!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(), FrenchCardActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -73,6 +80,8 @@ public class DecksFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "Button4!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(), CardActivity.class);
+                startActivity(intent);
 
             }
         });
