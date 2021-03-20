@@ -84,7 +84,6 @@ public class FirebaseUIActivity extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-
         ArrayList<CardModel> mockData = generateMockData();
         DeckModel deck = new DeckModel("1","Introduction to CS","Jee Kim", mockData);
 
@@ -93,6 +92,20 @@ public class FirebaseUIActivity extends AppCompatActivity {
         mDatabase.child("deck").setValue(mockData);
         mDatabase.child("test_deck_1").setValue(deck);
 
+    }
+    private ArrayList<CardModel> generateMockData()
+    {
+        ArrayList<CardModel> deck = new ArrayList<>();
+
+        CardModel card1 = new CardModel("Print 'hello world' in Python", "print('Hello World')");
+        CardModel card2 = new CardModel("Create an if-else statement", "if (condition) {} else {}");
+        CardModel card3 = new CardModel("Name a data structure", "Stacks, Heaps, Arrays, Vectors, HashMaps, Sets");
+
+        deck.add(card1);
+        deck.add(card2);
+        deck.add(card3);
+
+        return deck;
     }
 
     public void recieveDeck(String deckID)
@@ -128,20 +141,7 @@ public class FirebaseUIActivity extends AppCompatActivity {
         return outer_most_json;
     }
 
-    private ArrayList<CardModel> generateMockData()
-    {
-        ArrayList<CardModel> deck = new ArrayList<>();
 
-        CardModel card1 = new CardModel("Print 'hello world' in Python", "print('Hello World')");
-        CardModel card2 = new CardModel("Create an if-else statement", "if (condition) {} else {}");
-        CardModel card3 = new CardModel("Name a data structure", "Stacks, Heaps, Arrays, Vectors, HashMaps, Sets");
-
-        deck.add(card1);
-        deck.add(card2);
-        deck.add(card3);
-
-        return deck;
-    }
 
 //    private void readCardData()
 //    {
