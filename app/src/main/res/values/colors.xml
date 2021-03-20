@@ -18,6 +18,8 @@
     <color name="card_undobar_material_background_color">#EE323232</color>
     <color name="colorAccent">#274164</color>
 
+    <color name="colorCardPrimary">#2196F3</color>
+
     <color name="colorPrimary">@android:color/transparent</color>
     <color name="colorPrimaryDark">#FF6200EE</color>
 
