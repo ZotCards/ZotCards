@@ -73,6 +73,8 @@ import java.util.ArrayList;
  * Created by Ritesh Shakya on 8/22/2016.
  */
 public class CardActivity extends AppCompatActivity implements FragmentStatePager.EmptyInterface, View.OnClickListener, SpinnerInteractionListener.SpinnerListener {
+
+    private DatabaseReference mDatabase;
     /**
      * Default set of cards to load on first run.
      */
@@ -191,7 +193,7 @@ public class CardActivity extends AppCompatActivity implements FragmentStatePage
 //            actionBarModeDisplay.setText(getString(R.string.appbar_demo, current_mode.getDisplayText(), current_set.getDisplayName())); // Displays the current mode and set to user.
 //        }
 
-        current_set = new SetModel("Set 1", "cards/set1");
+        current_set = new SetModel("Set 1", "test_deck/deck");
 
         // Instantiate local Database
         dbHelper = new DatabaseContract.DbHelper(this);
@@ -199,6 +201,10 @@ public class CardActivity extends AppCompatActivity implements FragmentStatePage
         // Get the Firebase app and all primitives we'll use
         FirebaseApp app = FirebaseApp.getInstance();
         database = FirebaseDatabase.getInstance(app);
+
+        mDatabase = database.getReference();
+        mDatabase.child("test_connection").setValue("hello from CardActivity");
+
 
         // Instantiate Adaptor for ViewPager. Data added to Pager through Observer Pattern.
         loadData(current_set.getSetLocation());

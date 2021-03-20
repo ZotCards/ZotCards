@@ -12,6 +12,11 @@ public class CardModel implements Parcelable {
     public String frontSide;
     public String backSide;
 
+    public CardModel()
+    {
+
+    }
+
     /*
      * @param frontSide        Front side of the card
      * @param backSide         Backside of card
