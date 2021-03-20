@@ -54,7 +54,7 @@
             app:mrl_rippleOverlay="false"
             app:mrl_ripplePersistent="true">
 
-            <LinearLayout
+           <!-- <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -76,7 +76,7 @@
                     android:textColor="@color/colorPrimaryDark" />
             </LinearLayout>
 
-
+-->
         </com.balysv.materialripple.MaterialRippleLayout>
     </LinearLayout>
 
