@@ -12,17 +12,12 @@ public class CardModel implements Parcelable {
     public String frontSide;
     public String backSide;
 
+    public CardModel()
+    {
 
-    /**
-     * Default Constructor.
-     */
-    @SuppressWarnings("unused")
-    public CardModel() {
     }
 
-    /**
-     * Firebase uses this constructor for initializing class.
-     *
+    /*
      * @param frontSide        Front side of the card
      * @param backSide         Backside of card
      */

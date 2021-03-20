@@ -1,14 +1,13 @@
 package com.example.zotcard;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.zotcard.fragments.CreateDeckFragment;
 import com.example.zotcard.fragments.DecksFragment;
@@ -22,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     final FragmentManager fragmentManager = getSupportFragmentManager();
     private BottomNavigationView bottomNavigationView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Fragment fragment;
-                switch (menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
                     case R.id.action_create:
                         //TODO: update fragment
                         Toast.makeText(MainActivity.this, "Create!", Toast.LENGTH_SHORT).show();
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
 
-                fragmentManager.beginTransaction().replace(R.id.flContainer,fragment).commit();
+                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
                 return true;
             }
         });

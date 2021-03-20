@@ -1,18 +1,18 @@
 package com.example.zotcard.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.zotcard.MainActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.example.zotcard.Activities.CardActivity;
 import com.example.zotcard.R;
 
 public class DecksFragment extends Fragment {
@@ -47,6 +47,8 @@ public class DecksFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "Button1!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(), CardActivity.class);
+                startActivity(intent);
 
             }
         });

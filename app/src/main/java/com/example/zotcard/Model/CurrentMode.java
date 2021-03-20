@@ -1,4 +1,4 @@
-package com.sorcery.flashcards.Model;
+package com.example.zotcard.Model;
 
 import java.util.Collections;
 import java.util.Map;

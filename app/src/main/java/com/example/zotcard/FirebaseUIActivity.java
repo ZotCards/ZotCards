@@ -88,9 +88,8 @@ public class FirebaseUIActivity extends AppCompatActivity {
         ArrayList<CardModel> mockData = generateMockData();
         DeckModel deck = new DeckModel("1","Introduction to CS","Jee Kim", mockData);
 
-
-
         mDatabase.child("test").setValue("hello");
+
         mDatabase.child("deck").setValue(mockData);
         mDatabase.child("test_deck_1").setValue(deck);
 
