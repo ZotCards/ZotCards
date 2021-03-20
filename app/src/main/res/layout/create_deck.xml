@@ -15,8 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-
-        android:background="#CBC5C5"
+        android:background="@color/colorAccent"
         app:menu="@menu/menu_bottom_navigation" />
 
 
