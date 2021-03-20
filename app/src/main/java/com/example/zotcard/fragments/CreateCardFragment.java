@@ -20,6 +20,7 @@ public class CreateCardFragment extends Fragment {
     public static final String TAG = "CreateCardActivity";
     private EditText input_question;
     private EditText input_answer;
+    private EditText input_deck_name;
     private Button btn_addCard;
 
 
@@ -42,6 +43,7 @@ public class CreateCardFragment extends Fragment {
 
         input_question = view.findViewById(R.id.input_question);
         input_answer = view.findViewById(R.id.input_answer);
+        input_deck_name = view.findViewById(R.id.input_deck_name);
         btn_addCard = view.findViewById(R.id.btn_addCard);
 
         btn_addCard.setOnClickListener(new View.OnClickListener() {
@@ -49,13 +51,14 @@ public class CreateCardFragment extends Fragment {
             public void onClick(View v) {
                 String question = input_question.getText().toString();
                 String answer = input_answer.getText().toString();
-                addCard(question,answer);
+                String deck_name = input_deck_name.getText().toString();
+                addCard(deck_name,question,answer);
             }
         });
 
 
     }
 
-    private void addCard(String question, String answer) {
+    private void addCard(String deck_name, String question, String answer) {
     }
 }
