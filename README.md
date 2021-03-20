@@ -81,7 +81,7 @@ ZotCards is a flashcard app like {Anki / Quizlet} to learn languages. We will in
 <img src="https://github.com/ZotCards/ZotCards/blob/main/ZotCards.PNG" width=800><br>
 
 ### GIF Walkthrough
-<img src='ZotCards Login_SignUp.gif' title='Full Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='ZotCards Final Walkthrough.gif' title='Full Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## Schema 
